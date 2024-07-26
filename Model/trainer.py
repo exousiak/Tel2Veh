@@ -1,4 +1,7 @@
-"""### Trainer  """
+import torch
+import torch.optim as optim
+from Model.utils import masked_mae, masked_mape, masked_rmse, masked_smape  # Assuming these are defined in a utils file# Assuming args are imported from a separate file
+from Model.parameter import args
 
 class Trainer():
     def __init__(self, model,model_2, model_3, lrate, wdecay, clip, step_size, seq_out_len, scaler, scaler_2, device, cl=True):

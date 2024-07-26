@@ -1,4 +1,10 @@
-"""### Model .00001 ~ .0001"""
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+from Model.fusion import S_MutiChannel_GAT
+from Model.layer import graph_adaptive, dilated_inception, gcn
+from Model.parameter import args
+from Model.loading_GCT import adj_mx_gct
 
 class gginet(nn.Module):
     def __init__(self, model_type, gcn_true, buildA_true, gcn_depth, num_nodes, device, predefined_A=None,kernel_set=None, static_feat=None, dropout=0.3, subgraph_size=20, node_dim=40, dilation_exponential=1, conv_channels=32, residual_channels=32, skip_channels=64, end_channels=128, seq_length=12, in_dim=2, out_dim=12, layers=3, propalpha=0.05, tanhalpha=3, layer_norm_affline=True, fusion=None):
