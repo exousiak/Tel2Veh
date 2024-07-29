@@ -58,7 +58,7 @@
                 "--exclue_idx", "[4]",
                 "--expid_fusion", "202401251640",
                 "--runs", "1",
-                "--epochs", "10"
+                "--epochs", "180"
             ]
         }
     ]

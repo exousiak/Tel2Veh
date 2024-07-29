@@ -88,7 +88,7 @@ parser.add_argument('--exclue_idx',type=int,default=[4],help='idxs')
 ### Fusion ###
 parser.add_argument('--expid_fusion',type=int,default=202401251640,help='experiment id')
 parser.add_argument('--runs',type=int,default=1,help='number of runs')
-parser.add_argument('--epochs',type=int,default=10,help='')
+parser.add_argument('--epochs',type=int,default=180,help='')
 
 args=parser.parse_args(args=[])
 torch.set_num_threads(3)
